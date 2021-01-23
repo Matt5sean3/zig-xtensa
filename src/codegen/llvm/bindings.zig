@@ -1245,6 +1245,7 @@ pub const ArchType = enum(c_int) {
     x86,
     x86_64,
     xcore,
+    xtensa,
     nvptx,
     nvptx64,
     le32,

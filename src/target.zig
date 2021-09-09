@@ -241,6 +241,7 @@ pub fn hasLlvmSupport(target: std.Target) bool {
         .i386,
         .x86_64,
         .xcore,
+        .xtensa,
         .nvptx,
         .nvptx64,
         .le32,

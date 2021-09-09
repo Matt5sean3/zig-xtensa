@@ -34,3 +34,18 @@ Currently you can only build object files with the Xtensa LLVM project because [
 ```
 $ zig build-obj -target xtensa-freestanding -mcpu <esp32,esp8266,esp32-s2> [other options] <your .zig file>
 ```
+
+## Maintainance
+### How to update the `zig-xtensa` repository
+```bash
+$ # first 3 steps only needed when first cloning the repo
+$ git clone https://github.com/INetBowser/zig-xtensa
+$ cd zig-xtensa
+$ git remote add upstream https://github.com/ziglang/zig.git
+$ git checkout xtensa
+$ # you can start from here if you already cloned the repo
+$ git fetch upstream
+$ git rebase upstream/master
+$ zig build-exe tools/update_cpu_features.zig
+$ tools/update_cpu_features /path/to/llvm-tblgen <LLVM repo directory> <Zig repo directory>
+```

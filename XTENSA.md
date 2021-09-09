@@ -47,5 +47,5 @@ $ # you can start from here if you already cloned the repo
 $ git fetch upstream
 $ git rebase upstream/master
 $ zig build-exe tools/update_cpu_features.zig
-$ tools/update_cpu_features /path/to/llvm-tblgen <LLVM repo directory> <Zig repo directory>
+$ ./update_cpu_features /path/to/llvm-tblgen <LLVM repo directory> <Zig repo directory>
 ```

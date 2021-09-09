@@ -7489,6 +7489,13 @@ fn initializeLLVMTarget(arch: std.Target.Cpu.Arch) void {
             llvm.LLVMInitializeXCoreAsmPrinter();
             // There is no LLVMInitializeXCoreAsmParser function.
         },
+        .xtensa => {
+            llvm.LLVMInitializeXtensaTarget();
+            llvm.LLVMInitializeXtensaTargetInfo();
+            llvm.LLVMInitializeXtensaTargetMC();
+            llvm.LLVMInitializeXtensaAsmPrinter();
+            llvm.LLVMInitializeXtensaAsmParser();
+        },
         .m68k => {
             if (build_options.llvm_has_m68k) {
                 llvm.LLVMInitializeM68kTarget();

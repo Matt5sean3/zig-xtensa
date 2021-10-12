@@ -24,7 +24,7 @@ $ cmake --install .
 $ git clone https://github.com/INetBowser/zig-xtensa
 $ cd zig-xtensa
 $ mkdir build; cd build
-$ cmake -DCMAKE_PREFIX_PATH="<LLVM install directory>" -DCMAKE_INSTALL_PREFIX="<Zig install directory>" ..
+$ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="<LLVM install directory>" -DCMAKE_INSTALL_PREFIX="<Zig install directory>" ..
 $ make -j <# of preferred jobs>
 $ make install
 ```

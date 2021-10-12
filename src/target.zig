@@ -574,6 +574,7 @@ pub fn largestAtomicBits(target: std.Target) u32 {
         .thumbeb,
         .i386,
         .xcore,
+        .xtensa,
         .amdil,
         .hsail,
         .spir,

@@ -23,6 +23,7 @@ pub const Feature = enum {
     mac16,
     memctl,
     miscsr,
+    mul16,
     mul32,
     mul32high,
     nsa,
@@ -135,6 +136,11 @@ pub const all_features = blk: {
         .description = "Enable Xtensa Miscellaneous SR option",
         .dependencies = featureSet(&[_]Feature{}),
     };
+    result[@enumToInt(Feature.mul16)] = .{
+        .llvm_name = "mul16",
+        .description = "Enable Xtensa Mul16 option",
+        .dependencies = featureSet(&[_]Feature{}),
+    };
     result[@enumToInt(Feature.mul32)] = .{
         .llvm_name = "mul32",
         .description = "Enable Xtensa Mul32 option",
@@ -218,6 +224,7 @@ pub const cpu = struct {
             .mac16,
             .memctl,
             .miscsr,
+            .mul16,
             .mul32,
             .mul32high,
             .nsa,
@@ -245,6 +252,7 @@ pub const cpu = struct {
             .interrupt,
             .memctl,
             .miscsr,
+            .mul16,
             .mul32,
             .mul32high,
             .nsa,
@@ -277,6 +285,7 @@ pub const cpu = struct {
             .mac16,
             .memctl,
             .miscsr,
+            .mul16,
             .mul32,
             .mul32high,
             .nsa,
@@ -300,6 +309,7 @@ pub const cpu = struct {
             .extendedl32r,
             .highpriinterrupts,
             .interrupt,
+            .mul16,
             .mul32,
             .nsa,
             .prid,

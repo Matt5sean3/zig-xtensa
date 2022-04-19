@@ -21,7 +21,7 @@ $ cmake --install .
 
 ### 2. Building Zig with Xtensa support
 ```
-$ git clone https://github.com/INetBowser/zig-xtensa
+$ git clone https://github.com/inetbowser/zig-xtensa
 $ cd zig-xtensa
 $ mkdir build; cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="<LLVM install directory>" -DCMAKE_INSTALL_PREFIX="<Zig install directory>" ..
@@ -39,7 +39,7 @@ $ zig build-obj -target xtensa-freestanding -mcpu <esp32,esp8266,esp32-s2> [othe
 ### How to update the `zig-xtensa` repository
 ```bash
 $ # first 3 steps only needed when first cloning the repo
-$ git clone https://github.com/INetBowser/zig-xtensa
+$ git clone https://github.com/inetbowser/zig-xtensa
 $ cd zig-xtensa
 $ git remote add upstream https://github.com/ziglang/zig.git
 $ git checkout xtensa

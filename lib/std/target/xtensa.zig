@@ -238,9 +238,9 @@ pub const cpu = struct {
             .windowed,
         }),
     };
-    pub const esp32_s2 = CpuModel{
-        .name = "esp32_s2",
-        .llvm_name = "esp32-s2",
+    pub const esp32s2 = CpuModel{
+        .name = "esp32s2",
+        .llvm_name = "esp32s2",
         .features = featureSet(&[_]Feature{
             .coprocessor,
             .debug,
@@ -265,9 +265,9 @@ pub const cpu = struct {
             .windowed,
         }),
     };
-    pub const esp32_s3 = CpuModel{
-        .name = "esp32_s3",
-        .llvm_name = "esp32-s3",
+    pub const esp32s3 = CpuModel{
+        .name = "esp32s3",
+        .llvm_name = "esp32s3",
         .features = featureSet(&[_]Feature{
             .atomctl,
             .bool,
